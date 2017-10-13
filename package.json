@@ -1,0 +1,28 @@
+{
+  "name": "airport_challenge",
+  "version": "1.0.0",
+  "description": "Airport Challenge (Borrowed from Maker's academy: https://github.com/makersacademy/airport_challenge) =================",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurage/airportChallenge.git"
+  },
+  "author": "laura pedroni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurage/airportChallenge/issues"
+  },
+  "homepage": "https://github.com/laurage/airportChallenge#readme"
+}
