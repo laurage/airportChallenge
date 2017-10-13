@@ -6,6 +6,12 @@ describe("AIRPORT METHODS TESTS", function(){
 
     var airportHasSpace = require('../logic/airport_methods.js').airportHasSpace;
 
+    var planes = [
+      {
+        number: 233,
+      }
+    ];
+
     var airports = [
       {
         location: "paris",
@@ -28,6 +34,34 @@ describe("AIRPORT METHODS TESTS", function(){
   });
 
   describe("updateAirport", function(){
-    it("should add the plane in the airport where it has landed")
+
+    var airportHasSpace = require('../logic/airport_methods.js').airportHasSpace;
+
+    var planes = [
+      {
+        number: 233,
+      }
+    ];
+
+    var airports = [
+      {
+        location: "paris",
+        capacity: 5,
+        planesInAirport: [],
+      },
+      {
+        location: "london",
+        capacity: 2,
+        planesInAirport: [234, 235],
+      }
+    ]
+
+    it("should add the plane in the airport where it has landed", function(){
+      var updateAirport = require('../logic/airport_methods.js').updateAirport;
+
+      expect(updateAirport(planes[0], airports[0]).planesInAirport).to.deep.equal([233]);
+      expect(updateAirport(planes[0], airports[1]).planesInAirport).to.deep.equal([234, 235, 233]);
+
+    })
   });
 });
